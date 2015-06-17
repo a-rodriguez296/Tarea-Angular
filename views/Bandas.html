@@ -1,1 +1,14 @@
-<h1>Bandas</h1>
+<table class="table table-stripped">
+
+
+    <tr ng-repeat="banda in bandas | orderBy: ['name']">
+
+        <td>
+
+            <a>{{ :: banda.name}}</a>
+
+        </td>
+
+    </tr>
+
+</table>

@@ -1,1 +1,15 @@
-<h1>Géneros</h1>
+
+<table class="table table-stripped">
+
+
+    <tr ng-repeat="genero in generos | orderBy: ['name']">
+
+        <td>
+
+            <a>{{ :: genero.name}}</a>
+
+        </td>
+
+    </tr>
+
+</table>

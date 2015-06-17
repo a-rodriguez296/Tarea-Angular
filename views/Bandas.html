@@ -10,7 +10,7 @@
         </td>
         <td>
             <ul>
-                <li ng-repeat="member in banda.members">{{ ::member.name}} {{member.instruments}}</li>
+                <li ng-repeat="member in banda.members">{{ ::member.name}} {{member.instruments | instrumentos}}</li>
             </ul>
         </td>
 

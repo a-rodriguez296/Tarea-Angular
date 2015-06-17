@@ -8,6 +8,11 @@
             <a>{{ :: banda.name}}</a>
 
         </td>
+        <td>
+            <ul>
+                <li ng-repeat="member in banda.members">{{ ::member.name}} {{member.instruments}}</li>
+            </ul>
+        </td>
 
     </tr>
 

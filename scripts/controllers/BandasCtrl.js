@@ -1,6 +1,7 @@
 angular
     .module("jeviteca")
-    .controller("BandasCtrl",["$scope", function($scope){
+    .controller("BandasCtrl",["$scope","Bandas", function($scope, Bandas){
 
 
+        
     }]);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "jeviteca">
 <head lang="en">
     <meta charset="UTF-8" />
     <title></title>
@@ -13,9 +13,12 @@
     <script src="vendor/angular-route.min.js"></script>
     <script src="vendor/angular-route-segment.min.js"></script>
 
-
-
+   <!--Scripts própios-->
     <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/AlbumsCtrl.js"></script>
+    <script src="scripts/controllers/BandasCtrl.js"></script>
+    <script src="scripts/controllers/GenerosCtrl.js"></script>
+
  </head>
  <body>
 
@@ -26,14 +29,14 @@
 
         <nav>
             <ul class="nav nav-tabs">
-                <li>
-                    <a>Álbumes</a>
+                <li  class="active">
+                    <a href="#/albums">Álbumes</a>
                 </li>
-                <li>
-                    <a>Bandas</a>
+                <li >
+                    <a href="#/bandas">Bandas</a>
                 </li>
-                <li>
-                    <a>Géneros</a>
+                <li >
+                    <a href="#/generos">Géneros</a>
                 </li>
             </ul>
         </nav>

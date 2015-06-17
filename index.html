@@ -18,6 +18,7 @@
     <script src="scripts/controllers/AlbumsCtrl.js"></script>
     <script src="scripts/controllers/BandasCtrl.js"></script>
     <script src="scripts/controllers/GenerosCtrl.js"></script>
+    <script src="scripts/controllers/Navegacion.js"></script>
 
  </head>
  <body>
@@ -27,15 +28,15 @@
             <h1>JeviTeca</h1>
         </header>
 
-        <nav>
+        <nav ng-controller="Navegacion">
             <ul class="nav nav-tabs">
-                <li  class="active">
+                <li role="presentation"  ng-class="{ 'active': rutaEsAlbums() }">
                     <a href="#/albums">Álbumes</a>
                 </li>
-                <li >
+                <li role="presentation" ng-class="{ 'active': rutaEsBandas() }">
                     <a href="#/bandas">Bandas</a>
                 </li>
-                <li >
+                <li role="presentation" ng-class="{ 'active': rutaEsGeneros() }">
                     <a href="#/generos">Géneros</a>
                 </li>
             </ul>

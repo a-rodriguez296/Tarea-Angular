@@ -2,7 +2,6 @@ angular
     .module("jeviteca")
     .directive("elementoBanda", function(){
 
-
         return{
 
             restrict : "AE",
@@ -10,7 +9,7 @@ angular
             replace : true,
             scope : {
                 model : "="
-            },
+            }
         };
 
     });

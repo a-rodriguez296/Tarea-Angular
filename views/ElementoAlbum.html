@@ -1,0 +1,21 @@
+<tr>
+    <td>
+        <a>{{ :: album.title}}</a>
+    </td>
+    <td>
+        <img ng-src="images/{{ ::album.image}}"/>
+
+    </td>
+    <td>
+        <a>{{ :: album.year}}</a>
+    </td>
+    <td>
+        <a>{{ :: album.band.name}}</a>
+    </td>
+    <td>
+        <ul>
+            <li ng-repeat="track in album.tracklist">{{ ::track}}</li>
+        </ul>
+    </td>
+
+</tr>

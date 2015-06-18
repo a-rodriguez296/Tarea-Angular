@@ -1,0 +1,14 @@
+<tr>
+    <td>
+        <a> {{::model.name}}</a>
+
+    </td>
+    <td>
+        <ul>
+            <li ng-repeat="member in model.members">{{ ::member.name}} {{member.instruments | instrumentos}}</li>
+        </ul>
+    </td>
+
+</tr>
+
+

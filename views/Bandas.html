@@ -1,7 +1,19 @@
 <table class="table table-stripped">
 
 
-    <tr ng-repeat="banda in bandas | orderBy: ['name']">
+    <tbody>
+
+        <tr elemento-banda ng-repeat="banda in bandas | orderBy: ['name']"
+            model = "banda">
+
+        </tr>
+
+    </tbody>
+
+
+
+
+<!--    <tr ng-repeat="banda in bandas | orderBy: ['name']">
 
         <td>
 
@@ -14,6 +26,6 @@
             </ul>
         </td>
 
-    </tr>
+    </tr>-->
 
 </table>

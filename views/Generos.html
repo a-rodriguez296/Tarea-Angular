@@ -1,15 +1,7 @@
 
 <table class="table table-stripped">
-
-
-    <tr ng-repeat="genero in generos | orderBy: ['name']">
-
-        <td>
-
-            <a>{{ :: genero.name}}</a>
-
-        </td>
-
-    </tr>
-
+    <tbody>
+        <tr elemento-genero ng-repeat="genero in generos | orderBy: ['name']" genero ="genero">
+        </tr>
+    </tbody>
 </table>

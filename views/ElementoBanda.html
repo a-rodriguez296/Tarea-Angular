@@ -8,4 +8,7 @@
             <li ng-repeat="member in model.members">{{ ::member.name}} {{member.instruments | instrumentos}}</li>
         </ul>
     </td>
+    <td >
+        <input ng-model="(checkboxState)" type="checkbox" ng-change="marcarBanda(checkboxState)">
+    </td>
 </tr>

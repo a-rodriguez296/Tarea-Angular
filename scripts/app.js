@@ -6,19 +6,12 @@ angular
 
 angular
     .module("jeviteca")
-    .config(["$routeSegmentProvider", function ( $routeSegmentProvider ){
+    .config(["$routeSegmentProvider","$routeProvider", function ( $routeSegmentProvider, $routeProvider ){
 
 
         $routeSegmentProvider.when("/albums", "albums");
         $routeSegmentProvider.when("/bandas", "bandas");
         $routeSegmentProvider.when("/generos", "generos");
-
-
-
-/*        $routeSegmentProvider.segment("bandas", {
-            controller: "BandasCtrl",
-            templateUrl: "views/Bandas.html"
-        });*/
 
 
         $routeSegmentProvider.segment("albums", {
@@ -54,4 +47,9 @@ angular
                 }]
             }
         });
+
+        $routeProvider.otherwise({
+            redirectTo: "/albums"
+        });
+
     }]);

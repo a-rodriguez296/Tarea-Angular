@@ -12,6 +12,15 @@ angular
 
             },
             link : function(scope, element, attributes  ){
+
+                var favoritedBands = JSON.parse(localStorage.getItem("favBands"));
+
+                scope.checkboxState = {
+
+                    value : favoritedBands.indexOf(scope.model.name) != -1?true:false
+
+                }
+
                 scope.marcarBanda = function(checkboxState){
 
                     debugger;
@@ -35,21 +44,15 @@ angular
                         }
                         else{
 
+                            //Eliminar el elemento del arreglo
                             var index = bandsArray.indexOf(scope.model.name);
                             bandsArray.splice(index,1);
 
-
-
                         }
-
 
                         //Serializar el nuevo JSON
                         localStorage.setItem("favBands", JSON.stringify(bandsArray));
-
                     }
-
-
-
                 };
 
             }

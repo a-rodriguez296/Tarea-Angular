@@ -1,6 +1,6 @@
 angular
     .module("jeviteca")
-    .directive("elementoBanda", function(){
+    .directive("elementoBanda",["ApiService",function( ApiService){
 
         return{
 
@@ -13,17 +13,13 @@ angular
             },
             link : function(scope, element, attributes  ){
 
-                var favoritedBands = JSON.parse(localStorage.getItem("favBands"));
-
                 scope.checkboxState = {
-
-                    value : favoritedBands.indexOf(scope.model.name) != -1?true:false
+                    value : ApiService.bandIsFavorite(scope.model.name)
 
                 }
 
                 scope.marcarBanda = function(checkboxState){
 
-                    debugger;
                     if (typeof(Storage) !== "undefined") {
 
 
@@ -57,4 +53,4 @@ angular
 
             }
         };
-    });
+    }]);

@@ -19,7 +19,6 @@ angular
             templateUrl: "views/Albums.html",
             resolve : {
                 Albums : ["ApiService", function(ApiService){
-
                     return ApiService.obtenerDatos("data/albums.json");
                 }]
             }

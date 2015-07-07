@@ -1,6 +1,6 @@
 angular
     .module("jeviteca")
-    .directive("elementoBanda",["ApiService",function( ApiService){
+    .directive("elementoBanda",["WebStorageFactory",function( webStorageFactory){
 
         return{
 
@@ -14,7 +14,7 @@ angular
             link : function(scope, element, attributes  ){
 
                 scope.checkboxState = {
-                    value : ApiService.bandIsFavorite(scope.model.name)
+                    value : webStorageFactory.bandIsFavorite(scope.model.name)
 
                 }
 
@@ -22,17 +22,11 @@ angular
 
                     if (typeof(Storage) !== "undefined") {
 
+                        var bandsArray = webStorageFactory.loadFavoritedBandsArray()
 
-                        //Deseralizar el JSON
-                        var bandsArray = JSON.parse(localStorage.getItem("favBands"));
-
-                        //Caso primera vez en el que el arreglo no existe
-                        if(bandsArray == null){
-                            bandsArray = [];
-                        }
 
                         //Caso en el que se estan agregando elementos a la lista
-                        if(checkboxState){
+                        if(checkboxState.value){
 
                             //Agregar el nuevo elemento a esa lista
                             bandsArray.push(scope.model.name);
